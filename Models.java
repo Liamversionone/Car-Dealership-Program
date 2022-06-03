@@ -4,6 +4,7 @@ import javax.swing.JOptionPane;
 
 public class Models {
 
+	//These instance variables are used to store important information about the cars, as well as the available options for the selection windows.
 	private String name;
 	private String color;
 	private String packageType;
@@ -11,10 +12,13 @@ public class Models {
 	private String[] colors = {"Blue", "Red", "Black", "White", "Gray", "Pink"};
 	private String[] packages = {"Standard", "Deluxe", "Premium"};
 	
+	//These methods return the values of the String private instance variables to be used in other classes.
 	public String getName() {return name;}
 	public String getColor() {return color;}
 	public String getPackage() {return packageType;}
 	
+	/*This constructor is used to create new models of cars. If int x is 0-4, then the related model of car is made with a random color and random package type.
+	  If int x is 5, then the user is able to select what color and package type they want to have on the car.*/
 	public Models(int x){
 		double y = Math.random() * 100;
 		double z = Math.random() * 100;

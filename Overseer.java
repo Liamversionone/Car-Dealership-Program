@@ -4,6 +4,8 @@ import javax.swing.JOptionPane;
 
 public class Overseer {
 
+	/*These are the instance variables that are used to store the list of cars; the values that are stored within the model objects, such as model names,
+	  colors, and packages; as well as the options for the selection windows the users will interact with.*/
 	private CarList cars;
 	private String[] options1 = {"View Models Added", "Add/Remove Models", "Exit"};
 	private String[] options2 = {"Add Models", "Remove Models"};
@@ -13,6 +15,9 @@ public class Overseer {
 	private String[] colors = {"Blue", "Red", "Black", "White", "Gray", "Pink"};
 	private String[] packages = {"Standard", "Deluxe", "Premium"};
 	
+	/*This is the constructor used to put everything together. It will instantiate the cars varaible with a new CarList object. It will also begin to ask the
+	  user what they want to do and give them options for what they can do. When the user selects options, it will go through if statements to determine the
+	  next actions the user will take. The process will loop until the user decides to exit the program.*/
 	public Overseer() {
 		cars = new CarList();
 		boolean loop = true;
